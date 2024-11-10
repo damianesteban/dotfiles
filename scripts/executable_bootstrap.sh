@@ -20,3 +20,10 @@ fi
 echo "Applying chezmoi configuration..."
 chezmoi init https://github.com/username/dotfiles.git
 chezmoi apply -v
+
+# Set default shell to zsh if it isn't already
+if [ "$SHELL" != "/bin/zsh" ]; then
+  echo "Changing default shell to zsh..."
+  chsh -s /bin/zsh
+  echo "Default shell set to zsh. You may need to log out and log back in for the change to take effect."
+fi
