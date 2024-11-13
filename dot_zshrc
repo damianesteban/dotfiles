@@ -1,0 +1,23 @@
+source ~/.zplug/init.zsh
+eval "$(starship init zsh)"
+# zplug
+# Make sure to use double quotes
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "plugins/git",   from:oh-my-zsh
+
+zplug load --verbose
+
+alias cat='bat'
+
+export PATH="$HOME/.bin:$PATH"
+. "$HOME/.cargo/env"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+[ -f "/Users/damianesteban/.ghcup/env" ] && . "/Users/damianesteban/.ghcup/env" # ghcup-env
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+source ~/.supabase-completions.zsh
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
