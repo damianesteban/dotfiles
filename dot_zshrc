@@ -13,16 +13,16 @@ zplug load --verbose
 
 alias cat='bat'
 alias ls='lsd'
-export PATH="$HOME/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:$HOME/.volta/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/Users/damianesteban/.volta/bin:$PATH"
 . "$HOME/.cargo/env"
 export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
 eval "$(/opt/homebrew/bin/brew shellenv)"
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 [ -f "/Users/damianesteban/.ghcup/env" ] && . "/Users/damianesteban/.ghcup/env" # ghcup-env
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 source ~/.supabase-completions.zsh
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 . "$HOME/.atuin/bin/env"
 
@@ -54,11 +54,31 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 eval "$(rbenv init -)"
 
-# claude-mem smart trash alias
-alias rm='claude-mem trash'
 
 # Claude Code Templates - Global Agents
 export PATH="/Users/damianesteban/.claude-code-templates/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/damianesteban/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/damianesteban/.antigravity/antigravity/bin:$PATH"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# >>> opentmux >>>
+export OPENCODE_PORT=4096
+alias opencode='opentmux'
+# <<< opentmux <<<

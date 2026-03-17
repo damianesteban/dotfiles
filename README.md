@@ -4,19 +4,20 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/). macOS (Apple 
 
 ## What's Included
 
-| File/Directory | Description |
-|---|---|
-| `Brewfile` | Homebrew packages, casks, fonts, VS Code extensions |
-| `dot_zshrc` | Zsh configuration (starship, zplug, aliases, PATH) |
-| `dot_zshenv` | Zsh environment (Cargo) |
-| `dot_gitconfig` | Git configuration (diff-so-fancy, auto push remote) |
-| `dot_config/starship.toml` | Starship prompt theme (Gruvbox Dark) |
-| `dot_config/nvim/` | Neovim configuration (Lazy.nvim) |
-| `dot_config/gh/` | GitHub CLI configuration |
-| `dot_config/raycast/` | Raycast extensions and settings |
-| `damianesteban.code-profile` | VS Code Insiders profile (export) |
-| `cursor/` | Cursor editor settings and extensions |
-| `scripts/executable_bootstrap.sh` | New machine bootstrap script |
+| File/Directory                    | Description                                         |
+| --------------------------------- | --------------------------------------------------- |
+| `Brewfile`                        | Homebrew packages, casks, fonts, VS Code extensions |
+| `dot_zshrc`                       | Zsh configuration (starship, zplug, aliases, PATH)  |
+| `dot_zshenv`                      | Zsh environment (Cargo)                             |
+| `dot_gitconfig`                   | Git configuration (diff-so-fancy, auto push remote) |
+| `dot_config/starship.toml`        | Starship prompt theme (Gruvbox Dark)                |
+| `dot_config/nvim/`                | Neovim configuration (Lazy.nvim)                    |
+| `dot_config/gh/`                  | GitHub CLI configuration                            |
+| `dot_config/raycast/`             | Raycast extensions and settings                     |
+| `dot_config/tmux/`                | tmux configuration (oh-my-tmux local overrides)     |
+| `damianesteban.code-profile`      | VS Code Insiders profile (export)                   |
+| `cursor/`                         | Cursor editor settings and extensions               |
+| `scripts/executable_bootstrap.sh` | New machine bootstrap script                        |
 
 ## Bootstrap a New Machine
 
@@ -84,6 +85,7 @@ Export from VS Code: **Profiles > Export Profile** and save to `~/.dotfiles/dami
 
 ```bash
 cp ~/.config/starship.toml ~/.dotfiles/dot_config/starship.toml
+cp ~/.config/tmux/tmux.conf.local ~/.dotfiles/dot_config/tmux/tmux.conf.local
 # nvim is a git submodule -- update in place or copy
 ```
 
@@ -118,6 +120,7 @@ cd ~/.dotfiles && \
   cp ~/.zshenv dot_zshenv && \
   cp ~/.gitconfig dot_gitconfig && \
   cp ~/.config/starship.toml dot_config/starship.toml && \
+  cp ~/.config/tmux/tmux.conf.local dot_config/tmux/tmux.conf.local && \
   cp ~/Library/Application\ Support/Cursor/User/profiles/-4259e43e/settings.json cursor/profile-settings.json && \
   jq -r '.[].identifier.id' ~/Library/Application\ Support/Cursor/User/profiles/-4259e43e/extensions.json | sort > cursor/profile-extensions.txt && \
   cp ~/Library/Application\ Support/Cursor/User/settings.json cursor/default-settings.json && \

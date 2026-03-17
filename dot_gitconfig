@@ -1,7 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Damian Esteban
-	email = damian.esteban@gmail.com
+# Please adapt and uncomment the following lines:
+name = Damian Esteban
+email = damian.esteban@gmail.com
 [push]
 	autoSetupRemote = true
 [core]
