@@ -1,0 +1,37 @@
+{
+    "window.commandCenter": true,
+    "biome.enabled": true,
+    "update.releaseTrack": "prerelease",
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "eslint.format.enable": true,
+    "eslint.run": "onSave",
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "symbols.hidesExplorerArrows": false,
+    "workbench.iconTheme": "catppuccin-frappe",
+    "workbench.colorTheme": "Owlet (Oceanic Next)",
+    "cloudcode.autoDependencies": "off",
+    "go.toolsManagement.autoUpdate": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "geminicodeassist.displayInlineContextHint": false,
+    "cursor.enable_git_worktrees_setting": true,
+    "cursor.agent_layout_browser_beta_setting": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "claudeCode.preferredLocation": "sidebar",
+    "gitlens.ai.model": "gitkraken",
+    "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+    "githubPullRequests.pullBranch": "never"
+}
