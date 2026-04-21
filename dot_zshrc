@@ -14,6 +14,8 @@ zplug load --verbose
 alias cat='bat'
 alias ls='lsd'
 export PATH="$HOME/.bin:$HOME/.volta/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/Users/damianesteban/.volta/bin:$PATH"
+# Prevent sharp from trying to compile against Homebrew libvips during npm installs.
+export SHARP_IGNORE_GLOBAL_LIBVIPS=1
 . "$HOME/.cargo/env"
 export GOPATH=$HOME/src/go
 export PATH=$PATH:$GOPATH/bin
@@ -21,8 +23,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [ -f "/Users/damianesteban/.ghcup/env" ] && . "/Users/damianesteban/.ghcup/env" # ghcup-env
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
-source ~/.supabase-completions.zsh
-function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+[ -f "$HOME/.supabase-completions.zsh" ] && source "$HOME/.supabase-completions.zsh"
 
 . "$HOME/.atuin/bin/env"
 
@@ -78,7 +79,59 @@ export PATH="/Users/damianesteban/.antigravity/antigravity/bin:$PATH"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # >>> opentmux >>>
 export OPENCODE_PORT=4096
 alias opencode='opentmux'
 # <<< opentmux <<<
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# >>> opencode-agent-tmux >>>
+export OPENCODE_PORT=4096
+alias opencode='opencode-tmux'
+# <<< opencode-agent-tmux <<<
